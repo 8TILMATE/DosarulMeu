@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace V3.Models
 {
-    public class AdminModel
+    public class UserModel
     {
-        public string Email { get; set; }
-        public int Id { get; set; }
-        public string Pass { get; set; }
+        public string CNP;
+        public string Email;
+        public int Id;
+        public string Nume;
+
     }
 }

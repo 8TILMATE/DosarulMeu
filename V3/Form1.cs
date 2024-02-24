@@ -46,10 +46,19 @@ namespace V3
                 if (listpar.Contains(textBox2.Text))
                 {
                     MessageBox.Show("Logged");
+                    var page =new DashBoard();
+                    this.Hide();
+                    page.ShowDialog();
+                    this.Close();
                 }
             }
         }
         private async void GetUser(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
