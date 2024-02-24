@@ -82,6 +82,7 @@ namespace V3.TestingStuff
                 System.Diagnostics.Debug.WriteLine("Saved as '" + filename + "'");
 
             }*/
+            DatabaseHelpers.DatabaseHelper1.DownloadFile();
         }
         public async static Task stam(string stream)
         {
@@ -89,8 +90,11 @@ namespace V3.TestingStuff
             var task = new FirebaseStorage("dosarul-meu-f665c.appspot.com")
                 .Child("PDF.pdf")
                 .PutAsync(strea1m);
+            
             task.Progress.ProgressChanged += (s, e) => Console.WriteLine($"Progress: {e.Percentage} %");
-
+          //  var download = new FirebaseStorage("dosarul-meu-f665c.appspot.com");
+           // var x = download.Child("PDF.pdf").GetDownloadUrlAsync().Result;
+            //Console.WriteLine(x);
             // Await the task to wait until upload is completed and get the download url
             //var downloadUrl = await task;
             //Console.WriteLine(downloadUrl);

@@ -16,7 +16,7 @@ namespace V3
     public partial class DashBoard : Form
     {
         AutoCompleteStringCollection source = new AutoCompleteStringCollection();
-        public static UserModel md;
+        public static UserModel md = null;
 
 
         public DashBoard()
@@ -73,10 +73,14 @@ namespace V3
             }
             if (md != null)
             {
+                //System.Diagnostics.Process.Start("https://firebasestorage.googleapis.com/v0/b/dosarul-meu-f665c.appspot.com/o/PDF.pdf");
+                
                 TestingStuff.PdfTest x = new TestingStuff.PdfTest();
                 this.Hide();
                 x.ShowDialog();
                 this.Close();
+                
+
             }
         }
     }

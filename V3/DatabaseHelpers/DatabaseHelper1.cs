@@ -1,9 +1,12 @@
 ﻿using Firebase.Database;
+using Google.Cloud.Storage.V1;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using V3.Models;
 
 namespace V3.DatabaseHelpers
@@ -25,6 +28,14 @@ namespace V3.DatabaseHelpers
                     Nume = res.ToList()[i].Object.Nume
                 });
             }
+
+        }
+        public static void DownloadFile(string bucketName = "dosarul-meu-f665c.appspot.com", string objectName = "PDF.pdf",string localPath = "C:\\Users\\rafxg\\source\\repos\\V3\\V3\\ResourcesV2\\xx.pdf")
+        {
+            var storage = StorageClient.Create();
+            var outputFile = File.OpenWrite(localPath);
+            storage.DownloadObject(bucketName, objectName, outputFile);
+            Console.WriteLine($"Downloaded {objectName} to {localPath}.");
         }
     }
 }
