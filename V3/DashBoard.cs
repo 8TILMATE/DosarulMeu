@@ -63,13 +63,20 @@ namespace V3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach(UserModel model in DatabaseHelpers.DatabaseHelper1.utilizatori)
+            foreach (UserModel model in DatabaseHelpers.DatabaseHelper1.utilizatori)
             {
                 if (model.CNP == textBox1.Text)
                 {
                     MessageBox.Show("TickTock");
                     md = model; break;
                 }
+            }
+            if (md != null)
+            {
+                TestingStuff.PdfTest x = new TestingStuff.PdfTest();
+                this.Hide();
+                x.ShowDialog();
+                this.Close();
             }
         }
     }
