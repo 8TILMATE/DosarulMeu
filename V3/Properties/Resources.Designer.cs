@@ -63,6 +63,16 @@ namespace V3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap free_user_icon_3296_thumb {
+            get {
+                object obj = ResourceManager.GetObject("free-user-icon-3296-thumb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GradientSample {
             get {
                 object obj = ResourceManager.GetObject("GradientSample", resourceCulture);

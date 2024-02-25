@@ -82,16 +82,17 @@ namespace V3.TestingStuff
                 System.Diagnostics.Debug.WriteLine("Saved as '" + filename + "'");
 
             }*/
-            DatabaseHelpers.DatabaseHelper1.DownloadFile();
+            //DatabaseHelpers.DatabaseHelper1.DownloadFile();
         }
-        public async static Task stam(string stream)
+        public async  Task stam(string stream)
         {
             var strea1m = File.Open(stream, FileMode.Open);
             var task = new FirebaseStorage("dosarul-meu-f665c.appspot.com")
-                .Child("PDF.pdf")
+                .Child("232012.pdf")
                 .PutAsync(strea1m);
             
             task.Progress.ProgressChanged += (s, e) => Console.WriteLine($"Progress: {e.Percentage} %");
+            
           //  var download = new FirebaseStorage("dosarul-meu-f665c.appspot.com");
            // var x = download.Child("PDF.pdf").GetDownloadUrlAsync().Result;
             //Console.WriteLine(x);
