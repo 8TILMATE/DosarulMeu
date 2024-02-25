@@ -395,6 +395,9 @@
   <ItemGroup>
     <None Include="Resources\free-user-icon-3296-thumb.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\DosarulMeu_Icon.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SumatraPDF.Net.3.2.0\build\SumatraPDF.Net.targets" Condition="Exists('..\packages\SumatraPDF.Net.3.2.0\build\SumatraPDF.Net.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
