@@ -137,7 +137,7 @@ namespace V3
             MailMessage mail = new MailMessage();
 
             // Set the sender, recipient, subject and body of the email
-            mail.From = new MailAddress("rafxgam@gmail.com");
+            mail.From = new MailAddress("dosarulmeums3@gmail.com");
             mail.To.Add(new MailAddress(md.Email));
             mail.Subject = "STATUS SCHIMBAT LA DOSARUL #" + comboBox1.Items[comboBox1.SelectedIndex].ToString();
             if (IsPassedOn)
@@ -156,10 +156,10 @@ namespace V3
 
             // Set the host, port, credentials and SSL settings of the SMTP server
             smtp.Host = "smtp.gmail.com";
-            smtp.Port = 587;
-            smtp.Credentials = new NetworkCredential("dosarulmeums3@gmail.com", "kvar bggk mlcn vwfb");
+            smtp.Port = 25; //587
+            smtp.Credentials = new NetworkCredential("dosarulmeums3@gmail.com", "honh cfjp vcdf fujp");
             smtp.EnableSsl = true;
-
+            
             try
             {
                 // Send the email using the SMTP client
